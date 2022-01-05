@@ -1,0 +1,213 @@
+button{
+    position: relative;
+    height: 60px;
+    width: 200px;
+    margin: 0 35px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.5s;
+  }
+  button:first-child:hover{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+  }
+  button:last-child:hover{
+    background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+    background-size: 400%;
+  }
+  button:first-child:before,
+  button:last-child:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  button:first-child:hover:before,
+  button:last-child:hover:before{
+    opacity: 1;
+    z-index: -1;
+  }
+  button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+  }
+  @keyframes glow {
+    0%{
+      background-position: 0%;
+    }
+    100%{
+      background-position: 400%;
+    }
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  html {
+      scroll-behavior: smooth;
+  }
+  body {
+      font-family: poppins;
+      background: url(../grafika/tła/tlostrony.png);
+  }
+  ul, nav {
+      list-style: none;
+  }
+  a {
+      text-decoration: none;
+      cursor: pointer;
+      color: inherit;
+  }
+  header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      padding: 35px 100px 0;
+  }
+  header h2 {
+      text-transform: uppercase;
+  }
+  header nav {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+  }
+  header nav li {
+      margin: 0 15px;
+  }
+  header nav li:first-child {
+      margin-left: 0;
+  }
+  header nav li:last-child {
+      margin-right: 0;
+  }
+  @media(max-width:1000px) {
+      header {
+          padding: 20px 50px;
+      }
+  }
+  @media (max-width:700px) {
+      header {
+          flex-direction: column;
+      }
+      header h2 {
+          margin-bottom: 15px;
+      }
+      header nav li {
+          margin: 0 7px;
+      }
+  }
+  /*banner area*/
+  
+  section {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 110px 100px;
+  }
+  @media (max-width:1000px) {
+      section {
+          padding: 100px 50px;
+      }
+  }
+  @media (max-width:600px) {
+      section {
+          padding: 125px 30px;
+      }
+  }
+  section p {
+      max-width: 800px;
+      text-align: center;
+      margin-bottom: 35px;
+      padding: 0 20px;
+      line-height: 2;
+  }
+  .banner-area {
+      position: relative;
+      justify-content: center;
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+  }
+  .banner-area .banner-img {
+      background-image: url(../grafika/tła/tlo.png);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      z-index: -1;
+  }
+  .banner-area .banner-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: .8;
+  }
+  .banner-area h1 {
+      margin-bottom: 15px;
+      font-size: 65px;
+      font-family: merienda;
+  }
+  .banner-area h3 {
+      margin-bottom: 40px;
+      font-size: 25px;
+  }
+  .banner-area a.banner-btn {
+      padding: 15px 35px;
+      background: crimson;
+      border-radius: 50px;
+      text-transform: uppercase;
+  }
+  @media (max-width:800px) {
+      .banner-area {
+          min-height: 600px;
+      }
+      .banner-area h1 {
+          font-size: 32px;
+      }
+      .banner-area h3 {
+          font-size: 20px;
+      }
+      .banner-area a.banner-btn {
+          padding: 15px 40px;
+      }
+  }
